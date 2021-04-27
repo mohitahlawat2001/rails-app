@@ -1,23 +1,57 @@
 body {
     background: pink;
     color: whitesmoke;
-    font: bolder;
+    font: bold;
+    font-size: 30px;
 }
 div {
     color: rgba(67, 114, 255, 0.979);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    border-color: chartreuse;
-    border-style: dashed;
+    border-color: rgb(197, 255, 140);
+    border-style: dotted;
     border-width: 9px;
 
-    margin: 9px;
-    padding: 8px;
+    margin: 10px;
+    padding: 10px;
+
+}
+.text-red {
+    color: midnightblue;
+    font-weight: lighter;
 }
 
+
 h1 {
-    font-size: 30px;
+    font-size: 50px;
     font-style: italic;
+}
+
+a {
+    color: rgb(187, 253, 255);
+    font-size: 20;
+    font-family: cursive;
+    font-variant: normal;
+    text-decoration: none;
+}
+
+.inner {
+    background-color: rgb(255, 255, 153);
+    
+}
+
+.container {
+    background-color: chartreuse;
+    padding: 10px;
+}
+
+.container2 {
+    background-color: rgba(128, 255, 0, 0.521);
+    padding: 15px;
+}
+
+.container2 .inner {
+    color: crimson;
 }

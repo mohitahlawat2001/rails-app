@@ -1,0 +1,21 @@
+hello
+
+<h1> Each Comments </h1>
+
+<% @comments.each do |comment|%>
+  <div>
+   <%= comment.body %>  is comment 
+   <br/>
+   <%= comment.user.name %>
+  </div>
+
+<% end %>
+
+<hr>
+
+<h2> Login </h2>
+
+<%= form_for User.new do |f| %>
+    <%= f.text_field :name , placeholder: "namee" %>
+    <%= f.submit %>
+  <% end%>

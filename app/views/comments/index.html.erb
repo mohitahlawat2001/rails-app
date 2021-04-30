@@ -1,6 +1,14 @@
-hello
+<h1> User</h1>
+<% if current_user%>
+    Logged in as <%= current_user.name %>
+<% else%>
+    Logged out
+<%end%>
 
-<h1> Each Comments </h1>
+
+<hr/>
+
+<h1> All Comments </h1>
 
 <% @comments.each do |comment|%>
   <div>
@@ -12,6 +20,19 @@ hello
 <% end %>
 
 <hr>
+
+<h2>new comment</h2>
+
+<%= form_for Comment.new do |f| %>
+  <%= f.text_field :body%>
+  <%= f.submit %>
+<% end %>
+
+
+
+
+
+<hr/>
 
 <h2> Login </h2>
 

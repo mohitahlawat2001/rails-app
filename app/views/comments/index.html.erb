@@ -11,7 +11,13 @@
 <h1> All Comments </h1>
 
 <% @comments.each do |comment|%>
-  <div>
+  
+  <% if current_user && comment.user_id == current_user.id%>
+     <div class="active">
+     <% else %>
+       <div>
+       <% end %>
+
    <%= comment.body %>  is comment 
    <br/>
    <%= comment.user.name %>

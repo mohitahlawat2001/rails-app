@@ -1,3 +1,12 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+div {
+    padding: 10px;
+}
+
+.active {
+    background: rgba(206, 146, 255, 0.637);
+    text-align: right;
+    border-color: rgb(230, 255, 87);
+}

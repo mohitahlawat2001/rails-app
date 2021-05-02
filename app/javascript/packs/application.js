@@ -12,4 +12,5 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require('../hello')
+require('../hello');
+require('../home');

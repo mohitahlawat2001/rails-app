@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
     def other
     end
+
+    def mohit 
+    end 
 end

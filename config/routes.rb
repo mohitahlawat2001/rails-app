@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/other' , controller: "home" , action: "other"
 
+  get '/mohit' , controller: "home" , action: "mohit"
+  
 
 
   root to: 'home#index'

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :users
-
+  
+  get '/time' , controller: "home" , action: "time"
 
   get '/other' , controller: "home" , action: "other"
 

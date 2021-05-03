@@ -19,6 +19,8 @@
 
 document.addEventListener('click' , (clickEvent) => {
     let clickedElement = clickEvent.target;
+
+    updateTime(clickedElement);
     if (clickedElement.tagName === 'DIV') {
         if (clickedElement.style.backgroundColor === 'orange'){
             clickedElement.style.backgroundColor = 'blue';
@@ -35,12 +37,10 @@ document.addEventListener('turbolinks:load' , () => {
     });
 });
 
-
-
-
-
-fetch('https://github.com/mohitahlawat2001/mohitahlawat2001').then((response) => {
+function updateTime(elementToUpdate) {
+fetch('/time').then((response) => {
     response.text().then( (text) => {
-        console.log(text);
+        elementToUpdate.innerText = text;
     });
 });
+}

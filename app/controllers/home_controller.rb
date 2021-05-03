@@ -7,4 +7,8 @@ class HomeController < ApplicationController
 
     def mohit 
     end 
+
+    def time
+      render plain: "time is #{Time.now}"
+    end
 end

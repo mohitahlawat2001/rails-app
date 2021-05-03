@@ -9,6 +9,9 @@ class HomeController < ApplicationController
     end 
 
     def time
-      render plain: "time is #{Time.now}"
+      hash = {
+        time: Time.now
+      }
+      render json: hash
     end
 end

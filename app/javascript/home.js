@@ -1,26 +1,9 @@
-//alert("congrationalation")
-// function turnBoxBlue(element) {
-//     element.style.backgroundColor = 'blue';
-// }
-
-// function onPageLoad() {
-//     let boxes = document.querySelectorAll('.box');
-//     boxes.forEach( (element) => {
-//         element.style.backgroundColor = 'blue';
-//     });
-// }
-
-// function boxClicked(clickEvent) {
-//     let clickedElement = clickEvent.target;
-//     if (clickedElement.tagName === 'DIV') {
-//         clickedElement.style.backgroundColor = 'orange';
-//     }
-//}
 
 document.addEventListener('click' , (clickEvent) => {
     let clickedElement = clickEvent.target;
 
     updateTime(clickedElement);
+    
     if (clickedElement.tagName === 'DIV') {
         if (clickedElement.style.backgroundColor === 'orange'){
             clickedElement.style.backgroundColor = 'blue';
@@ -39,8 +22,8 @@ document.addEventListener('turbolinks:load' , () => {
 
 function updateTime(elementToUpdate) {
 fetch('/time').then((response) => {
-    response.text().then( (text) => {
-        elementToUpdate.innerText = text;
+    response.json().then( (data) => {
+        elementToUpdate.innerText = 'The Time is :' + data.time;
     });
 });
 }

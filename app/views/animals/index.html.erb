@@ -1,0 +1,13 @@
+<% @animals.each do |animals|%>
+
+<div class="animal">
+
+   <%= image_tag animals.image_url %>
+   <%= animals.name%>
+   
+   <div class="animal-number">
+   <%= animals.id%>
+   </div>
+   
+</div>
+<%end%>

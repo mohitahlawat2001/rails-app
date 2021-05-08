@@ -1,13 +1,11 @@
 <% @animals.each do |animals|%>
 
-<div class="animal">
+<div class="animal" data-animal-number="<%= animals.id %>">
 
-   <%= image_tag animals.image_url %>
+   
    <%= animals.name%>
    
-   <div class="animal-number">
-   <%= animals.id%>
-   </div>
+   
    
 </div>
 <%end%>

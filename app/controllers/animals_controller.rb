@@ -4,8 +4,8 @@ class AnimalsController < ApplicationController
     end
     
     def show
-     animal = Animal.find_by(id: params[:id])
-     hash = {sound: animal.sound}
-     render json: hash
+     @animal = Animal.find_by(id: params[:id])
+    
+     render "show" , layout: false
     end
 end

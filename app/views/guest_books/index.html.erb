@@ -1,0 +1,6 @@
+<h2>hello world </h2>
+<% @guest_books.each do |guest_book|%>
+    <div>
+     name of guest is <%= link_to guest_book.name ,guest_book_path(guest_book)%>
+    </div>
+<%end%>

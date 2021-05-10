@@ -1,0 +1,14 @@
+<h2> hello world </h2>
+
+<% @guest_book.guest_book_entries.each do |guest_book_entry|%>
+
+    <div>
+    <%= guest_book_entry.body %>
+    <strong>
+    <%= guest_book_entry.person_name%>
+    </strong>
+
+
+
+    </div>
+<% end %>

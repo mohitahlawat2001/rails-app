@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
  
+  resources :guest_books do
+    resources :guest_book_entries
+  end
+
+
   resources :animals
 
   resources :comments

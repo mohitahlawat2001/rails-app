@@ -14,5 +14,5 @@ ActiveStorage.start()
 
 // require('../hello');
 //require('../home');
-require('../animals');
+// require('../animals');
 require('../guest-book');

@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
  
-  resources :guest_books do
-    resources :guest_book_entries
+  resources :guest_books do 
+    member do 
+      get :messages
+    end
   end
 
 
-  resources :animals
+  # resources :animals
 
-  resources :comments
+  # resources :comments
 
-  resources :users
+  # resources :users
   
   get '/time' , controller: "home" , action: "time"
 
